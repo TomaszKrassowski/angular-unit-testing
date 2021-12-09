@@ -1,0 +1,13 @@
+<div class="clr-row">
+  <ng-container *ngIf="userCountryIPAddress$ | async as countryInfo; else loader">
+    <app-country-information
+      [name]="countryInfo.country"
+      [ip]="countryInfo.ip"
+      [code]="countryInfo.name"
+      (showGeoInfo)="navigateToGeoInfo()">
+    </app-country-information>
+  </ng-container>
+  <ng-template #loader>
+    <clr-spinner>Loading</clr-spinner>
+  </ng-template>
+</div>

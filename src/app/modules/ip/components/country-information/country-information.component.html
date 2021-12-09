@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-header"> IP Address Information </div>
+  <div class="card-block">
+    <div class="card-title">
+      {{ ip }}
+    </div>
+    <div class="card-text">
+      {{ joinSign | joiner: name:code }}
+    </div>
+  </div>
+  <div class="card-footer">
+    <button class="btn btn-sm btn-link" (click)="showGeoInfoClick()">Show geographical info</button>
+  </div>
+</div>

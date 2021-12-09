@@ -1,0 +1,11 @@
+<div class="card">
+  <div class="card-header"> IP Address Information </div>
+  <div class="card-block">
+    <div class="card-title">
+      {{ ip }}
+    </div>
+    <div class="card-text">
+      {{ joinSign | joiner: country:city:organizationName }}
+    </div>
+  </div>
+</div>

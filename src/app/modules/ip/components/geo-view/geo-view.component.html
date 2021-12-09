@@ -1,0 +1,13 @@
+<div class="clr-row">
+  <ng-container *ngIf="geoInformation$ | async as geoInfo; else loader">
+    <app-geographical-information
+      [ip]="geoInfo.ip"
+      [country]="geoInfo.country"
+      [city]="geoInfo.city"
+      [organizationName]="geoInfo.organization_name">
+    </app-geographical-information>
+  </ng-container>
+  <ng-template #loader>
+    <clr-spinner>Loading</clr-spinner>
+  </ng-template>
+</div>
