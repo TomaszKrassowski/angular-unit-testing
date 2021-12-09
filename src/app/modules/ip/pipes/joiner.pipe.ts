@@ -4,7 +4,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'joiner',
 })
 export class JoinerPipe implements PipeTransform {
-  transform(joiner = '-', ...args: string[]): string {
+  transform(joiner: string, ...args: string[]): string {
     return args.join(joiner);
   }
 }
